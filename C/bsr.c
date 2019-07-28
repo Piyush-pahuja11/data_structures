@@ -1,6 +1,7 @@
 
 #include<stdio.h> 
 #include<stdlib.h>
+#include<math.h>
 int bs(int a[],int l,int r,int x) 
 { 
    if (r>=l) 
