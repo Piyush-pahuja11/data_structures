@@ -1,0 +1,48 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include<string>
+using namespace std;
+void swap(string a,string b)
+{
+    int i=0;
+    char t;
+    int a=s.length();
+    int b=s1.length();
+    if(a==b)
+    {
+for(i=0;i<a;i++)
+    {
+        t=s.at(i);
+        s.at(i)=s1.at(i);
+        s1.at(i)=t;
+        
+    }
+    cout<<s<<"     "<<s1;
+    }
+    else if(a>b)
+    {
+        for(i=0;i<b;i++)
+        {
+             t=s.at(i);
+             s.at(i)=s1.at(i);
+             s1.at(i)=t;
+        }
+    }
+    else
+    cout<<"length is not same";
+int main()
+{
+    string s,s1;
+    getline(cin,s);
+    getline(cin,s1);
+    swap(s,s1);
+
+    return 0;
+}
