@@ -11,44 +11,40 @@ node* createlist(int n,int *a)
 	head=NULL;
 	node *temp=NULL;
 	node *p=NULL;
+	//temp=(node)malloc(sizeof(node));
+	//head->data=a[0];
+	//head->next=NULL;
 	for(int i=0;i<n;i++)
 	{
 		temp=(node*)malloc(sizeof(node));
 		temp->data=a[i];
 		temp->next=NULL;
-		if(head==NULL)
-			head=temp;
-		else
-		{
-			p=head;
-			while(p->next!=NULL)
-				p=p->next;
-			p->next=temp;
-		}	
+		if(head!=NULL)
+			temp->next=head;
+		head=temp; 
 	}
-	return head;
+  return head;
 }
 void display(node *head)
 {
 	node *p=head;
 	while(p!=NULL)
 	{
-		printf("%d",p->data);
+		printf("%d  ",p->data);
 		p=p->next;
 	}
 }
+
 int main(int argc,const char* argv[])
 {
 	int n=argc-1;
 	int a[n];
 	for(int i=0;i<n;i++)
 	{
-		a[i]=atoi(argv[i+1]);
+		a[i]=atoi(argv[i+1]);	
 	}
 	node *head=NULL;
-	head = createlist(n,a);
+	head=createlist(n,a);
 	display(head);
-	
-   return 0;
-
+  return 0;
 }
